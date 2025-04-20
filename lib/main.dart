@@ -21,10 +21,7 @@ class NewsApp extends StatelessWidget {
           routerConfig: router,
           debugShowCheckedModeBanner: false,
           title: 'News App',
-          theme: ThemeData(
-            brightness: Brightness.dark,
-            textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-          ),
+          theme: ThemeData(brightness: Brightness.dark),
         );
       },
     );
