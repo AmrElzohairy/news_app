@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/utils/app_colors.dart';
 import 'package:news_app/core/utils/app_styles.dart';
 import 'package:news_app/feature/home/presentation/ui/widgets/home_header.dart';
-import 'package:news_app/feature/home/presentation/ui/widgets/recommended_article_widget.dart';
+import 'package:news_app/feature/home/presentation/ui/widgets/recommended_article_list_view.dart';
 import 'package:news_app/feature/home/presentation/ui/widgets/rounded_carousal_slider.dart';
 
 class HomeView extends StatelessWidget {
@@ -43,7 +43,16 @@ class HomeView extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    RecommendedArticleWidget(),
+                  ],
+                ),
+              ),
+              SliverFillRemaining(
+                child: TabBarView(
+                  children: [
+                    RecommendedArticleListView(),
+                    RecommendedArticleListView(),
+                    RecommendedArticleListView(),
+                    RecommendedArticleListView(),
                   ],
                 ),
               ),
