@@ -26,7 +26,6 @@ class NewsApp extends StatelessWidget {
           theme: ThemeData(
             brightness: Brightness.dark,
             primaryColor: AppColors.primaryColor,
-            scaffoldBackgroundColor: AppColors.scaffoldColor,
             fontFamily: AppFont.nunitoSans,
           ),
         );

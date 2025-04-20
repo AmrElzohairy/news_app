@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/feature/home/presentation/ui/widgets/home_header.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'Home View',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-        ],
+    return Scaffold(
+      body: SafeArea(
+        child: Column(children: [const SizedBox(height: 20), HomeHeader()]),
       ),
     );
   }
