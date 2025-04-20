@@ -9,6 +9,12 @@ class AppStyles {
     fontWeight: FontWeight.w600,
   );
 
+    static TextStyle font16SemiBoldWhite = TextStyle(
+    color: AppColors.white,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static TextStyle font9SemiBoldWhite = TextStyle(
     color: AppColors.white,
     fontSize: 9.sp,

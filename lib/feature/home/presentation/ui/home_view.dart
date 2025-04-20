@@ -15,27 +15,43 @@ class HomeView extends StatelessWidget {
       initialIndex: 0,
       child: Scaffold(
         body: SafeArea(
-          child: Column(
-            children: [
-              const SizedBox(height: 20),
-              HomeHeader(),
-              const SizedBox(height: 30),
-              RoundedCarouselSlider(),
-              const SizedBox(height: 30),
-              TabBar(
-                indicatorColor: AppColors.primaryColor,
-                indicatorWeight: 3,
-                indicatorSize: TabBarIndicatorSize.label,
-                labelColor: Colors.white,
-                unselectedLabelColor: Colors.white,
-                labelStyle: AppStyles.font12BoldWhite,
-                labelPadding: EdgeInsets.symmetric(horizontal: 5.w),
-                tabs: const [
-                  Tab(text: 'Science'),
-                  Tab(text: 'Environment'),
-                  Tab(text: 'Animals'),
-                  Tab(text: 'Travel'),
-                ],
+          child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverToBoxAdapter(
+                child: Column(
+                  children: [
+                    const SizedBox(height: 20),
+                    HomeHeader(),
+                    const SizedBox(height: 30),
+                    RoundedCarouselSlider(),
+                    const SizedBox(height: 30),
+                    TabBar(
+                      indicatorColor: AppColors.primaryColor,
+                      indicatorWeight: 3,
+                      indicatorSize: TabBarIndicatorSize.label,
+                      labelColor: Colors.white,
+                      unselectedLabelColor: Colors.white,
+                      labelStyle: AppStyles.font12BoldWhite,
+                      labelPadding: EdgeInsets.symmetric(horizontal: 5.w),
+                      tabs: const [
+                        Tab(text: 'Science'),
+                        Tab(text: 'Environment'),
+                        Tab(text: 'Animals'),
+                        Tab(text: 'Travel'),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        Text(
+                          'Recommended Article',
+                          style: AppStyles.font16SemiBoldWhite,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
