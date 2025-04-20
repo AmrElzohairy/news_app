@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/routes/go_router.dart';
 import 'package:news_app/core/utils/app_colors.dart';
+import 'package:news_app/core/utils/app_font.dart';
 
 void main() {
   runApp(const NewsApp());
@@ -26,6 +27,7 @@ class NewsApp extends StatelessWidget {
             brightness: Brightness.dark,
             primaryColor: AppColors.primaryColor,
             scaffoldBackgroundColor: AppColors.scaffoldColor,
+            fontFamily: AppFont.nunitoSans,
           ),
         );
       },
