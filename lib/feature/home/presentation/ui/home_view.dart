@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
         body: SafeArea(
           child: CustomScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: AlwaysScrollableScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(
                 child: Column(
