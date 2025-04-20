@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/routes/go_router.dart';
+import 'package:news_app/core/utils/app_colors.dart';
 
 void main() {
   runApp(const NewsApp());
@@ -21,7 +22,11 @@ class NewsApp extends StatelessWidget {
           routerConfig: router,
           debugShowCheckedModeBanner: false,
           title: 'News App',
-          theme: ThemeData(brightness: Brightness.dark),
+          theme: ThemeData(
+            brightness: Brightness.dark,
+            primaryColor: AppColors.primaryColor,
+            scaffoldBackgroundColor: AppColors.scaffoldColor,
+          ),
         );
       },
     );
